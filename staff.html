@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Staff Dashboard — Stackly</title>
+<link rel="stylesheet" href="./staff.css">
+</head>
+<body>
+
+<!-- ===== Sidebar ===== -->
+<div class="sidebar">
+  <div class="sidebar-header">
+    <a href="index.html" class="sidebar-logo">Stackly <span></span></a>
+    <div class="sidebar-subtitle">Staff Portal</div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Main</div>
+    <a href="staff-dashboard.html" class="nav-item active">
+      <span class="nav-icon">🏠</span> Dashboard
+    </a>
+    <a href="404page.html" class="nav-item">
+      <span class="nav-icon">📋</span> My Tasks
+      <span class="nav-badge">4</span>
+    </a>
+    <a href="404page.html" class="nav-item">
+      <span class="nav-icon">📅</span> My Schedule
+    </a>
+    <a href="404page.html" class="nav-item">
+      <span class="nav-icon">📊</span> Performance
+    </a>
+
+    <div class="nav-section-label">Work</div>
+    <a href="404page.html" class="nav-item">
+      <span class="nav-icon">📁</span> Projects
+    </a>
+    <a href="404page.html" class="nav-item">
+      <span class="nav-icon">👥</span> Team
+    </a>
+
+    <a href="404page.html" class="nav-item">
+      <span class="nav-icon">📄</span> Documents
+    </a>
+
+    <div class="nav-section-label">HR & Support</div>
+    <a href="404page.html" class="nav-item">
+      <span class="nav-icon">🗓️</span> Leave Request
+    </a>
+    <a href="404page.html" class="nav-item">
+      <span class="nav-icon">💰</span> Payslips
+    </a>
+    <a href="404page.html" class="nav-item">
+      <span class="nav-icon">🔔</span> Announcements
+      <span class="nav-badge">2</span>
+    </a>
+    <a href="404page.html" class="nav-item">
+      <span class="nav-icon">⚙️</span> Settings
+    </a>
+    <a href="login.html" class="logout-btn">⬅ Logout</a>
+  </nav>
+  <a href="login.html" class="logout-btn">⬅ Logout</a>
+
+  <div class="sidebar-footer">
+    <div class="sidebar-user">
+      <div class="user-avatar">S</div>
+      <div class="user-info">
+        <h4>Staff User</h4>
+        <p>staff@stackly.com</p>
+      </div>
+    </div>
+    <a href="login.html" class="logout-btn">⬅ Logout</a>
+  </div>
+</div>
+
+<!-- ===== Main ===== -->
+<div class="main">
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <div>
+        <h2>Dashboard</h2>
+        <div class="breadcrumb-dash">Staff Portal <span>/</span> Overview</div>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <button class="notif-btn">🔔<div class="notif-dot"></div></button>
+      <div class="topbar-user">
+        <div class="user-avatar" style="width:36px;height:36px;font-size:13px;">S</div>
+        <div>
+          <h4>Staff User</h4>
+          <p>Business Consultant</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+
+    <!-- Welcome Banner -->
+    <div class="welcome-banner">
+      <div class="wb-text">
+        <h1>Good Morning, Staff 👋</h1>
+        <p>You have 4 pending tasks and 2 meetings scheduled today.</p>
+      </div>
+      <div class="wb-date" id="dash-date"></div>
+    </div>
+
+    <!-- Stat Cards -->
+    <div class="stat-cards">
+      <div class="stat-card">
+        <div class="sc-top">
+          <div class="sc-icon blue">📋</div>
+          <span class="sc-change up">↑ 2</span>
+        </div>
+        <h3>12</h3>
+        <p>Tasks Assigned</p>
+      </div>
+      <div class="stat-card">
+        <div class="sc-top">
+          <div class="sc-icon teal">✅</div>
+          <span class="sc-change up">+18%</span>
+        </div>
+        <h3>87%</h3>
+        <p>Completion Rate</p>
+      </div>
+      <div class="stat-card">
+        <div class="sc-top">
+          <div class="sc-icon gold">📅</div>
+          <span class="sc-change neu">Today</span>
+        </div>
+        <h3>2</h3>
+        <p>Meetings Today</p>
+      </div>
+      <div class="stat-card">
+        <div class="sc-top">
+          <div class="sc-icon green">🏖️</div>
+          <span class="sc-change neu">Annual</span>
+        </div>
+        <h3>14</h3>
+        <p>Leave Days Left</p>
+      </div>
+    </div>
+
+    <!-- Main Grid: Activity + Tasks -->
+    <div class="dash-grid">
+
+      <!-- Recent Activity -->
+      <div class="dash-card">
+        <div class="dash-card-header">
+          <h3>Recent Activity</h3>
+          <a href="404page.html" class="card-link">View All</a>
+        </div>
+        <div class="activity-list">
+          <div class="activity-item">
+            <div class="activity-dot dot-green"></div>
+            <div class="activity-text">
+              <h4>Leave request approved — Jun 15–16</h4>
+              <p>Approved by Jonathan Ashford · HR</p>
+            </div>
+            <span class="activity-time">8:42 AM</span>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot dot-blue"></div>
+            <div class="activity-text">
+              <h4>Task "Q3 Report" assigned to you</h4>
+              <p>Assigned by Priya Nair · Due Jun 5</p>
+            </div>
+            <span class="activity-time">8:10 AM</span>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot dot-teal"></div>
+            <div class="activity-text">
+              <h4>David Park commented on Nexus proposal</h4>
+              <p>Strategy Consulting · Documents</p>
+            </div>
+            <span class="activity-time">Yesterday</span>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot dot-gold"></div>
+            <div class="activity-text">
+              <h4>Timesheet for Week 22 submitted</h4>
+              <p>Pending manager approval</p>
+            </div>
+            <span class="activity-time">Yesterday</span>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot dot-blue"></div>
+            <div class="activity-text">
+              <h4>Tech Stack Audit 2026.pdf shared by R. Menon</h4>
+              <p>Technology · Documents</p>
+            </div>
+            <span class="activity-time">Jun 2</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- My Tasks -->
+      <div class="dash-card">
+        <div class="dash-card-header">
+          <h3>My Tasks</h3>
+          <a href="404page.html" class="card-link">Manage</a>
+        </div>
+        <div class="task-list">
+          <div class="task-item" onclick="toggleTask(this)">
+            <div class="task-check"></div>
+            <span class="task-text">Prepare Q3 Client Report — Nexus Ventures</span>
+            <span class="task-priority high">High</span>
+          </div>
+          <div class="task-item" onclick="toggleTask(this)">
+            <div class="task-check"></div>
+            <span class="task-text">Review contract — Apex Industries</span>
+            <span class="task-priority med">Med</span>
+          </div>
+          <div class="task-item" onclick="toggleTask(this)">
+            <div class="task-check done">✓</div>
+            <span class="task-text done">Submit weekly timesheet</span>
+            <span class="task-priority low">Done</span>
+          </div>
+          <div class="task-item" onclick="toggleTask(this)">
+            <div class="task-check"></div>
+            <span class="task-text">Update CRM data — GlobalEdge Corp</span>
+            <span class="task-priority med">Med</span>
+          </div>
+          <div class="task-item" onclick="toggleTask(this)">
+            <div class="task-check done">✓</div>
+            <span class="task-text done">Attend marketing strategy kickoff</span>
+            <span class="task-priority low">Done</span>
+          </div>
+          <div class="task-item" onclick="toggleTask(this)">
+            <div class="task-check"></div>
+            <span class="task-text">Draft HR onboarding automation proposal</span>
+            <span class="task-priority high">High</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Grid: Schedule + Performance + Leave -->
+    <div class="dash-grid-3">
+
+      <!-- Today's Schedule -->
+      <div class="dash-card">
+        <div class="dash-card-header">
+          <h3>Today's Schedule</h3>
+          <a href="404page.html" class="card-link">Full calendar</a>
+        </div>
+        <div class="schedule-list">
+          <div class="schedule-item">
+            <div class="sched-time">09:00<span>AM</span></div>
+            <div class="sched-bar navy"></div>
+            <div class="sched-body">
+              <h4>Morning Check-in</h4>
+              <p>Daily sync · Team Lead · 15 min</p>
+            </div>
+            <span class="sched-badge meet">Meeting</span>
+          </div>
+          <div class="schedule-item">
+            <div class="sched-time">10:00<span>AM</span></div>
+            <div class="sched-bar gold"></div>
+            <div class="sched-body">
+              <h4>Team Standup</h4>
+              <p>All-hands · Conf Room B</p>
+            </div>
+            <span class="sched-badge meet">Meeting</span>
+          </div>
+          <div class="schedule-item">
+            <div class="sched-time">02:00<span>PM</span></div>
+            <div class="sched-bar teal"></div>
+            <div class="sched-body">
+              <h4>Client Call — Nexus Ventures</h4>
+              <p>Q3 deliverables review · Zoom</p>
+            </div>
+            <span class="sched-badge call">Call</span>
+          </div>
+          <div class="schedule-item">
+            <div class="sched-time">04:00<span>PM</span></div>
+            <div class="sched-bar red"></div>
+            <div class="sched-body">
+              <h4>Report Submission Deadline</h4>
+              <p>Q3 Client Report due</p>
+            </div>
+            <span class="sched-badge due">Deadline</span>
+          </div>
+          <div class="schedule-item">
+            <div class="sched-time">05:30<span>PM</span></div>
+            <div class="sched-bar teal"></div>
+            <div class="sched-body">
+              <h4>Performance Review Prep</h4>
+              <p>Self-assessment form due</p>
+            </div>
+            <span class="sched-badge review">Review</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Performance -->
+      <div class="dash-card">
+        <div class="dash-card-header">
+          <h3>Performance (This Week)</h3>
+        </div>
+
+        <!-- Bar chart -->
+        <div class="bar-chart" style="margin-bottom:22px;">
+          <div class="bar-col"><div class="bar" style="height:52%"></div><span class="bar-label">Mon</span></div>
+          <div class="bar-col"><div class="bar" style="height:78%"></div><span class="bar-label">Tue</span></div>
+          <div class="bar-col"><div class="bar alt" style="height:65%"></div><span class="bar-label">Wed</span></div>
+          <div class="bar-col"><div class="bar" style="height:90%"></div><span class="bar-label">Thu</span></div>
+          <div class="bar-col"><div class="bar alt" style="height:45%"></div><span class="bar-label">Fri</span></div>
+          <div class="bar-col"><div class="bar" style="height:30%"></div><span class="bar-label">Sat</span></div>
+          <div class="bar-col"><div class="bar" style="height:87%"></div><span class="bar-label">Today</span></div>
+        </div>
+
+        <!-- Goal progress -->
+        <div class="dash-card-header" style="margin-bottom:14px;">
+          <h3 style="font-size:14px;">Goal Progress</h3>
+        </div>
+        <div class="progress-list">
+          <div>
+            <div class="progress-header"><span>Client Satisfaction</span><span>92 / 100</span></div>
+            <div class="progress-track"><div class="progress-fill" style="width:92%"></div></div>
+          </div>
+          <div>
+            <div class="progress-header"><span>Quarterly Tasks</span><span>34 / 40</span></div>
+            <div class="progress-track"><div class="progress-fill" style="width:85%"></div></div>
+          </div>
+          <div>
+            <div class="progress-header"><span>Training Modules</span><span>3 / 5</span></div>
+            <div class="progress-track"><div class="progress-fill gold" style="width:60%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Leave Request -->
+      <div class="dash-card">
+        <div class="dash-card-header">
+          <h3>Leave Request</h3>
+          <a href="404page.html" class="card-link">History</a>
+        </div>
+
+        <div class="leave-balances">
+          <div class="leave-bal">
+            <div class="lb-num">14</div>
+            <div class="lb-type">Annual</div>
+          </div>
+          <div class="leave-bal">
+            <div class="lb-num">7</div>
+            <div class="lb-type">Sick</div>
+          </div>
+          <div class="leave-bal">
+            <div class="lb-num">3</div>
+            <div class="lb-type">Casual</div>
+          </div>
+          <div class="leave-bal">
+            <div class="lb-num">2</div>
+            <div class="lb-type">Comp Off</div>
+          </div>
+        </div>
+
+        <div class="leave-form" id="leave-form">
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label">Leave Type</label>
+              <select class="form-select">
+                <option>Annual Leave</option>
+                <option>Sick Leave</option>
+                <option>Casual Leave</option>
+                <option>Comp Off</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label class="form-label">Duration</label>
+              <select class="form-select">
+                <option>Full Day</option>
+                <option>Half Day (AM)</option>
+                <option>Half Day (PM)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label">From</label>
+              <input class="form-input" type="date" value="2026-06-15">
+            </div>
+            <div class="form-field">
+              <label class="form-label">To</label>
+              <input class="form-input" type="date" value="2026-06-16">
+            </div>
+          </div>
+          <div class="form-field">
+            <label class="form-label">Reason</label>
+            <textarea class="form-textarea" placeholder="Brief reason for leave…"></textarea>
+          </div>
+          <button class="form-submit" onclick="submitLeave()">Submit Request</button>
+        </div>
+
+        <div id="leave-success" style="display:none; text-align:center; padding:24px 0;">
+          <div style="font-size:32px; margin-bottom:10px;">✅</div>
+          <h3 style="font-size:16px; color:var(--navy); margin-bottom:6px;">Request Submitted!</h3>
+          <p style="font-size:13px; color:var(--muted);">Pending manager approval.</p>
+          <button onclick="resetLeave()" style="margin-top:14px; background:none; border:1px solid var(--border); padding:7px 16px; border-radius:6px; font-size:12px; font-family:'DM Sans',sans-serif; cursor:pointer; color:var(--muted);">Submit Another</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Announcements row -->
+    <div class="dash-grid-3">
+
+      <!-- Announcements -->
+      <div class="dash-card" style="grid-column: span 2;">
+        <div class="dash-card-header">
+          <h3>Announcements</h3>
+          <a href="404page.html" class="card-link">View All</a>
+        </div>
+        <div class="ann-list">
+          <div class="ann-item">
+            <div class="ann-icon event">🎉</div>
+            <div class="ann-body">
+              <h4>Q2 All-Hands Meeting — June 10</h4>
+              <p>Quarterly company-wide review. All staff attendance is mandatory. Agenda shared via email.</p>
+              <span class="ann-tag event">Event</span>
+            </div>
+          </div>
+          <div class="ann-item">
+            <div class="ann-icon policy">📜</div>
+            <div class="ann-body">
+              <h4>Updated Remote Work Policy</h4>
+              <p>New hybrid schedule effective July 1. Two in-office days per week required. Please review the updated guidelines on the portal.</p>
+              <span class="ann-tag policy">Policy</span>
+            </div>
+          </div>
+          <div class="ann-item">
+            <div class="ann-icon alert">⚠️</div>
+            <div class="ann-body">
+              <h4>Timesheet Submission Reminder</h4>
+              <p>All May timesheets must be submitted by June 5. Late submissions will affect payroll processing.</p>
+              <span class="ann-tag alert">Urgent</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Documents -->
+      <div class="dash-card">
+        <div class="dash-card-header">
+          <h3>My Documents</h3>
+          <a href="404page.html" class="card-link">View All</a>
+        </div>
+        <div class="region-row">
+          <span class="region-label">📕 Employment Contract.pdf</span>
+          <a href="404page.html" style="font-size:12px; color:var(--teal); font-weight:600;">⬇</a>
+        </div>
+        <div class="region-row">
+          <span class="region-label">📗 Q2 Timesheet.xlsx</span>
+          <a href="404page.html" style="font-size:12px; color:var(--teal); font-weight:600;">⬇</a>
+        </div>
+        <div class="region-row">
+          <span class="region-label">📘 Onboarding Handbook.docx</span>
+          <a href="404page.html" style="font-size:12px; color:var(--teal); font-weight:600;">⬇</a>
+        </div>
+        <div class="region-row">
+          <span class="region-label">📕 Tech Stack Audit 2026.pdf</span>
+          <a href="404page.html" style="font-size:12px; color:var(--teal); font-weight:600;">⬇</a>
+        </div>
+        <div class="region-row">
+          <span class="region-label">📕 Brand Guidelines 2026.pdf</span>
+          <a href="404page.html" style="font-size:12px; color:var(--teal); font-weight:600;">⬇</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div><!-- /.content -->
+</div><!-- /.main -->
+
+<script>
+// Date
+const d = new Date();
+document.getElementById('dash-date').innerHTML =
+  `<strong style="color:#fff;font-size:16px;">${d.toLocaleDateString('en-US',{weekday:'long'})}</strong><br>
+   ${d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})}`;
+
+// Task toggle
+function toggleTask(el) {
+  const check = el.querySelector('.task-check');
+  const text  = el.querySelector('.task-text');
+  const badge = el.querySelector('.task-priority');
+  const done  = check.classList.toggle('done');
+  text.classList.toggle('done', done);
+  check.textContent = done ? '✓' : '';
+  if (done) { badge.textContent = 'Done'; badge.className = 'task-priority low'; }
+}
+
+// Leave form
+function submitLeave() {
+  document.getElementById('leave-form').style.display = 'none';
+  document.getElementById('leave-success').style.display = 'block';
+}
+function resetLeave() {
+  document.getElementById('leave-form').style.display = '';
+  document.getElementById('leave-success').style.display = 'none';
+}
+
+// Progress bars animate on load
+window.addEventListener('load', () => {
+  document.querySelectorAll('.progress-fill').forEach(el => {
+    const w = el.style.width;
+    el.style.width = '0';
+    setTimeout(() => { el.style.width = w; }, 400);
+  });
+});
+</script>
+
+</body>
+</html>

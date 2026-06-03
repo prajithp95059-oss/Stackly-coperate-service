@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — Stackly</title>
+<link rel="stylesheet" href="./login.css">
+</head>
+<body>
+
+<div class="bg-shapes">
+  <div class="bg-shape"></div>
+  <div class="bg-shape"></div>
+  <div class="bg-shape"></div>
+</div>
+
+<div class="login-wrap">
+  <!-- Left decorative panel -->
+  <div class="login-panel">
+    <div class="panel-logo">
+      <a href="index.html">
+        <img src="./assets/stackly new logo.webp" alt="Stackly Logo">
+        Stackly <span></span>
+      </a>
+    </div>
+
+    <div class="panel-body">
+      <h2>Welcome Back to Stackly</h2>
+      <p>Your secure workspace for managing clients, projects, and operations.</p>
+      <div class="panel-features">
+        <div class="pf-item"><div class="pf-dot"></div><span>Access real-time business analytics</span></div>
+        <div class="pf-item"><div class="pf-dot"></div><span>Manage projects and team tasks</span></div>
+        <div class="pf-item"><div class="pf-dot"></div><span>Collaborate across departments</span></div>
+        <div class="pf-item"><div class="pf-dot"></div><span>Secure, enterprise-grade platform</span></div>
+      </div>
+    </div>
+
+    <div class="panel-footer">© 2025 Stackly. All rights reserved.</div>
+  </div>
+
+  <!-- Right form -->
+  <div class="login-form-side">
+    <h2>Sign In</h2>
+    <p>Enter your credentials to access your dashboard.</p>
+
+    <!-- Role Selector -->
+    <div class="role-tabs">
+      <button class="role-tab active" data-role="admin">Admin</button>
+      <button class="role-tab" data-role="staff">Staff</button>
+    </div>
+
+    <!-- Error Message -->
+    <div class="error-msg" id="error-msg">
+      <span>⚠</span>
+      <span></span>
+    </div>
+
+    <!-- Form -->
+    <div class="form-group">
+      <label>Username</label>
+      <div class="input-wrap">
+        <input type="text" id="username" placeholder="Enter your username" autocomplete="username">
+        <span class="input-icon">👤</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Password</label>
+      <div class="input-wrap">
+        <input type="password" id="password" placeholder="Enter your password" autocomplete="current-password">
+        <span class="input-icon toggle-pw" id="pw-toggle">👁</span>
+      </div>
+    </div>
+
+    <div class="form-row-inline">
+      <label class="remember">
+        <input type="checkbox"> Remember me
+      </label>
+      <a href="#" class="forgot">Forgot password?</a>
+    </div>
+
+    <button class="login-btn" id="login-btn" onclick="login()">
+      <span class="btn-text">Sign In</span>
+      <div class="spinner"></div>
+    </button>
+
+    <p style="font-size:12px; color:#94a3b8; margin-top:16px; text-align:center;">
+      Demo: admin / admin123 &nbsp;|&nbsp; staff / staff123
+    </p>
+
+    <a href="index.html" class="back-link">← Back to Website</a>
+  </div>
+</div>
+
+<script src="./login.js"></script>
+</body>
+</html>

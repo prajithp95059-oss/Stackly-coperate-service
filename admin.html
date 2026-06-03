@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard — Stackly</title>
+<link rel="stylesheet" href="./dashboard.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo">Stackly <span></span></div>
+    <div class="sidebar-subtitle">Admin Portal</div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Main</div>
+    <a href="admin.html" class="nav-item active">
+      <span class="nav-icon">📊</span> Dashboard
+    </a>
+    <a href="#" class="nav-item">
+      <span class="nav-icon">💼</span> Manage Services
+    </a>
+    <a href="#" class="nav-item">
+      <span class="nav-icon">✍️</span> Manage Blogs
+      <span class="nav-badge">3</span>
+    </a>
+
+    <div class="nav-section-label">People</div>
+    <a href="#" class="nav-item">
+      <span class="nav-icon">🤝</span> Clients
+    </a>
+    <a href="#" class="nav-item">
+      <span class="nav-icon">👥</span> Manage Staff
+    </a>
+    <a href="#" class="nav-item">
+      <span class="nav-icon">💼</span> Manage Careers
+    </a>
+
+    <div class="nav-section-label">System</div>
+    <a href="#" class="nav-item">
+      <span class="nav-icon">⚙️</span> Settings
+    </a>
+    <a href="#" class="nav-item">
+      <span class="nav-icon">📋</span> Reports
+    </a>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="sidebar-user">
+      <div class="user-avatar">AD</div>
+      <div class="user-info">
+        <h4>Admin User</h4>
+      </div>
+    </div>
+    <a href="login.html" class="logout-btn">⬅ Logout</a>
+  </div>
+</div>
+
+<!-- Main -->
+<div class="main">
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <div>
+        <h2>Dashboard</h2>
+        <div class="breadcrumb-dash">Admin <span>/</span> Overview</div>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <button class="notif-btn">🔔<div class="notif-dot"></div></button>
+      <div class="topbar-user">
+        <div class="user-avatar" style="width:36px;height:36px;font-size:13px;">AD</div>
+        <div>
+          <h4>Admin User</h4>
+          <p>Administrator</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+
+    <!-- Welcome Banner -->
+    <div class="welcome-banner">
+      <div class="wb-text">
+        <h1>Good Morning, Admin 👋</h1>
+        <p>Here's what's happening with Stackly today.</p>
+      </div>
+      <div class="wb-date" id="dash-date"></div>
+    </div>
+
+    <!-- Stat Cards -->
+    <div class="stat-cards">
+      <div class="stat-card">
+        <div class="sc-top">
+          <div class="sc-icon blue">📊</div>
+          <span class="sc-change up">↑ 12%</span>
+        </div>
+        <h3>120</h3>
+        <p>Total Projects</p>
+      </div>
+      <div class="stat-card">
+        <div class="sc-top">
+          <div class="sc-icon teal">👥</div>
+          <span class="sc-change up">↑ 4%</span>
+        </div>
+        <h3>50</h3>
+        <p>Staff Members</p>
+      </div>
+      <div class="stat-card">
+        <div class="sc-top">
+          <div class="sc-icon gold">🤝</div>
+          <span class="sc-change up">↑ 8%</span>
+        </div>
+        <h3>500</h3>
+        <p>Total Clients</p>
+      </div>
+      <div class="stat-card">
+        <div class="sc-top">
+          <div class="sc-icon green">✍️</div>
+          <span class="sc-change down">↓ 2%</span>
+        </div>
+        <h3>15</h3>
+        <p>Blog Posts</p>
+      </div>
+    </div>
+
+    <!-- Main Grid -->
+    <div class="dash-grid">
+      <!-- Recent Activity -->
+      <div class="dash-card">
+        <div class="dash-card-header">
+          <h3>Recent Activity</h3>
+          <a href="#" class="card-link">View All</a>
+        </div>
+        <div class="activity-list">
+          <div class="activity-item">
+            <div class="activity-dot dot-teal"></div>
+            <div class="activity-text">
+              <h4>New client onboarded — Apex Industries</h4>
+              <p>Business Consulting · New York</p>
+            </div>
+            <span class="activity-time">10 min ago</span>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot dot-blue"></div>
+            <div class="activity-text">
+              <h4>Project "Atlas" marked complete</h4>
+              <p>Technology Solutions · Remote Team</p>
+            </div>
+            <span class="activity-time">1 hr ago</span>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot dot-gold"></div>
+            <div class="activity-text">
+              <h4>Blog post published</h4>
+              <p>"Top 5 Business Trends 2025"</p>
+            </div>
+            <span class="activity-time">3 hr ago</span>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot dot-green"></div>
+            <div class="activity-text">
+              <h4>New staff member added</h4>
+              <p>Elena Kowalski · Finance Division</p>
+            </div>
+            <span class="activity-time">Yesterday</span>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot dot-blue"></div>
+            <div class="activity-text">
+              <h4>Proposal sent to GlobalEdge Corp</h4>
+              <p>Digital Marketing Package · $42,000</p>
+            </div>
+            <span class="activity-time">Yesterday</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tasks -->
+      <div class="dash-card">
+        <div class="dash-card-header">
+          <h3>Quick Tasks</h3>
+          <a href="#" class="card-link">Manage</a>
+        </div>
+        <div class="task-list">
+          <div class="task-item" onclick="toggleTask(this)">
+            <div class="task-check done">✓</div>
+            <span class="task-text done">Review Q2 financial report</span>
+            <span class="task-priority low">Done</span>
+          </div>
+          <div class="task-item" onclick="toggleTask(this)">
+            <div class="task-check"></div>
+            <span class="task-text">Approve 3 pending job postings</span>
+            <span class="task-priority high">High</span>
+          </div>
+          <div class="task-item" onclick="toggleTask(this)">
+            <div class="task-check"></div>
+            <span class="task-text">Update services pricing page</span>
+            <span class="task-priority med">Med</span>
+          </div>
+          <div class="task-item" onclick="toggleTask(this)">
+            <div class="task-check"></div>
+            <span class="task-text">Schedule board meeting for June</span>
+            <span class="task-priority high">High</span>
+          </div>
+          <div class="task-item" onclick="toggleTask(this)">
+            <div class="task-check done">✓</div>
+            <span class="task-text done">Onboard GlobalEdge Corp client</span>
+            <span class="task-priority low">Done</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Grid -->
+    <div class="dash-grid-3">
+      <!-- Revenue Bar -->
+      <div class="dash-card">
+        <div class="dash-card-header">
+          <h3>Revenue (2025)</h3>
+        </div>
+        <div class="bar-chart">
+          <div class="bar-col"><div class="bar" style="height:55%"></div><span class="bar-label">Jan</span></div>
+          <div class="bar-col"><div class="bar" style="height:70%"></div><span class="bar-label">Feb</span></div>
+          <div class="bar-col"><div class="bar" style="height:48%"></div><span class="bar-label">Mar</span></div>
+          <div class="bar-col"><div class="bar alt" style="height:88%"></div><span class="bar-label">Apr</span></div>
+          <div class="bar-col"><div class="bar" style="height:76%"></div><span class="bar-label">May</span></div>
+          <div class="bar-col"><div class="bar" style="height:92%"></div><span class="bar-label">Jun</span></div>
+        </div>
+      </div>
+
+      <!-- Active Projects -->
+      <div class="dash-card">
+        <div class="dash-card-header">
+          <h3>Active Projects</h3>
+          <a href="#" class="card-link">View All</a>
+        </div>
+        <table class="data-table">
+          <thead><tr><th>Project</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Atlas Platform</td><td><span class="status-badge active">Active</span></td></tr>
+            <tr><td>Nexus Rebrand</td><td><span class="status-badge pending">Pending</span></td></tr>
+            <tr><td>GlobalEdge CRM</td><td><span class="status-badge active">Active</span></td></tr>
+            <tr><td>Apex Analytics</td><td><span class="status-badge completed">Completed</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Client Map / Summary -->
+      <div class="dash-card">
+        <div class="dash-card-header">
+          <h3>Client Overview</h3>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px; margin-top:4px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid #e2e8f0;">
+            <span style="font-size:14px; color:#1e293b;">North America</span>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div style="height:6px; width:100px; background:#e2e8f0; border-radius:3px; overflow:hidden;"><div style="height:100%; width:68%; background:#0b1f3a; border-radius:3px;"></div></div>
+              <span style="font-size:13px; color:#64748b; min-width:30px;">68%</span>
+            </div>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid #e2e8f0;">
+            <span style="font-size:14px; color:#1e293b;">Europe</span>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div style="height:6px; width:100px; background:#e2e8f0; border-radius:3px; overflow:hidden;"><div style="height:100%; width:45%; background:#1e8a7a; border-radius:3px;"></div></div>
+              <span style="font-size:13px; color:#64748b; min-width:30px;">45%</span>
+            </div>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid #e2e8f0;">
+            <span style="font-size:14px; color:#1e293b;">Asia Pacific</span>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div style="height:6px; width:100px; background:#e2e8f0; border-radius:3px; overflow:hidden;"><div style="height:100%; width:30%; background:#c8a96e; border-radius:3px;"></div></div>
+              <span style="font-size:13px; color:#64748b; min-width:30px;">30%</span>
+            </div>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 0;">
+            <span style="font-size:14px; color:#1e293b;">Middle East</span>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div style="height:6px; width:100px; background:#e2e8f0; border-radius:3px; overflow:hidden;"><div style="height:100%; width:18%; background:#112d52; border-radius:3px;"></div></div>
+              <span style="font-size:13px; color:#64748b; min-width:30px;">18%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// Date
+const d = new Date();
+document.getElementById('dash-date').innerHTML =
+  `<strong style="color:#fff;font-size:16px;">${d.toLocaleDateString('en-US',{weekday:'long'})}</strong><br>
+   ${d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})}`;
+
+// Task toggle
+function toggleTask(el) {
+  const check = el.querySelector('.task-check');
+  const text = el.querySelector('.task-text');
+  const badge = el.querySelector('.task-priority');
+  const done = check.classList.toggle('done');
+  text.classList.toggle('done', done);
+  check.textContent = done ? '✓' : '';
+  if (done) { badge.textContent = 'Done'; badge.className = 'task-priority low'; }
+}
+</script>
+</body>
+</html>
